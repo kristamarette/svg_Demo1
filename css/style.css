@@ -1,15 +1,28 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .content-wrapper {
-  background-color: #000;
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
+  padding: 0;
 }
 
-#tect-txt {
-  width: 250px;
+.content-wrapper section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-#myCircs {
-  position: relative;
-  bottom: 0;
+.content-wrapper section #svg-img {
+  width: auto;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
