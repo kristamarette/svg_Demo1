@@ -13,7 +13,7 @@ $(document).ready(function () {
     let yellowCirc = $('#yellowCirc');
 
     let headingtext1 = $('#heading-text1');
-    let technoloogytext = $('#technoloogy-text');
+    let technologyText = $('#technology-text');
     let smallGreens = $('#smallGreens');
     let smallOranges = $('#smallOranges');
     let smallWhites = $('#smallWhites');
@@ -30,7 +30,9 @@ $(document).ready(function () {
     let miisccirc5 = $('#miisc>.cls-1');
 
     let bluerect = $('#blueBase>.cls-2');
-    let headText = $('#heading-text1>path')
+    let headText = $('#heading-text1>path');
+    let techText = $('#technology-text>path');
+    // console.log(techText);
 
     const ei = "power4.in";
     const eo = "power4.out";
@@ -109,7 +111,7 @@ $(document).ready(function () {
         }, {
             autoAlpha: 1,
             duration: 2
-        }, "+=1")
+        }, "-=1")
 
         step3.fromTo(bluerect, {
             autoAlpha: 0
@@ -148,14 +150,31 @@ $(document).ready(function () {
         })
         return step5
     }
+    function step_6(){
+        let step6 = gsap.timeline({
+            id: "step6"
+        })
+        step6.fromTo(technologyText,{autoAlpha:0},{autoAlpha:1})
+        step6.from(techText,{
+            autoAlpha: 0,
+            x: -15,
+            y: 10,
+            stagger: 0.1,
+            ease: bi 
+        })
+        return step6
+    }
 
     let master = gsap.timeline();
     master.add(intro(), "+=0.5")
-        .add(step_1(), "+=0.5")
+        .add(step_1(), "-=0.5")
         .add(step_2(), "-=0.25")
-        .add(step_3(), "-=2")
-        .add(step_4(), "-=1")
+        .add(step_3(), "-=1")
+        .add(step_4(), "-=1.5")
         .add(step_5(), "-=2")
+        .add(step_6(), "+=0.3")
     GSDevTools.create();
     //document.ready ends here
 });
+
+// id="blueBox" 
