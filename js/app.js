@@ -230,7 +230,8 @@ $(document).ready(function () {
     .add(step_5(), "-=2")
     .add(step_6(), "+=0.3")
     .add(step_7());
-  GSDevTools.create();
+  
+    GSDevTools.create();
   //document.ready ends here
 });
 
